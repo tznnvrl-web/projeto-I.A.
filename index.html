@@ -4,21 +4,21 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <link rel="stylesheet" href="style.css">
-<title>Saneamento na Maxixe – registo escolar</title> 
+<title>Saneamento na Maxixe – registro escolar</title> 
 </head>
 <body>
 <header class="top">
   <div class="wrap">
     <h1>Saneamento básico na cidade da Maxixe</h1>
-    <p>Registo escolar de água, resíduos sólidos, esgotos e drenagem por bairro. Projecto de Informática Avançada.</p>
+    <p>Registro escolar de água, resíduos sólidos, esgotos e drenagem por bairro. Projecto de Informática Avançada.</p>
     <nav class="tabs" aria-label="Seções">
-      <a href="#resumo">Resumo</a><a href="#registos">Registos</a><a href="#novo">Novo registo</a><a href="#creditos">Creditos</a>
+      <a href="#resumo">Resumo</a><a href="#registro">Registro</a><a href="#novo">Novo registros</a><a href="#creditos">Creditos</a>
     </nav>
   </div>
 </header>
 
 <main class="wrap">
-  <div class="note"><b>Dados de exemplo.</b> Os bairros e ocorrências abaixo são fictícios, só para mostrar como a ferramenta funciona. Substitua-os pelos dados recolhidos pelo grupo.</div>
+  <div class="note"><b>Dados de exemplo.</b> Os bairros e ocorrências abaixo são fictícios, só para mostrar como o site funciona.</div>
 
   <section id="resumo">
     <h2>Resumo</h2>
@@ -35,9 +35,9 @@
     </div>
   </section>
 
-  <section id="registos">
-    <h2>Registos</h2>
-    <p class="sub">Cada linha é uma ocorrência observada ou encontrada numa fonte institucional. Não se registam dados pessoais.</p>
+  <section id="registro">
+    <h2>Registros</h2>
+    <p class="sub">Cada linha é uma ocorrência observada ou encontrada numa fonte institucional. Não se registram dados pessoais.</p>
     <div class="card scroll">
       <table>
         <thead><tr><th>Bairro</th><th>Categoria</th><th>Ocorrência</th><th>Gravidade</th><th>Fonte</th></tr></thead>
@@ -47,8 +47,8 @@
   </section>
 
   <section id="novo">
-    <h2>Novo registo</h2>
-    <p class="sub">Preencha os campos e o registo entra na tabela e nos gráficos.</p>
+    <h2>Novo registro</h2>
+    <p class="sub">Preencha os campos e o registro entra na tabela e nos gráficos.</p>
     <div class="card">
       <div class="form">
         <label>Bairro<input id="nBairro" list="bairros" placeholder="Ex.: Bairro A"><datalist id="bairros"></datalist></label>
@@ -56,7 +56,7 @@
         <label>Gravidade<select id="nGr"><option>Baixa</option><option>Média</option><option>Alta</option></select></label>
         <label>Fonte<select id="nFonte"><option>Fonte institucional</option><option>Observação orientada</option><option>Pergunta breve</option></select></label>
         <label class="full">Descrição da ocorrência<textarea id="nDesc" placeholder="Ex.: Contentor de lixo cheio junto ao mercado"></textarea></label>
-        <div class="full"><button id="add" type="button">Guardar registo</button><span id="msg" role="status"></span></div>
+        <div class="full"><button id="add" type="button">Guardar registro</button><span id="msg" role="status"></span></div>
       </div>
     </div>
   </section>
