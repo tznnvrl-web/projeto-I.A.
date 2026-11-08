@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="stylesheet" href="style.css">
+<title>Saneamento na Maxixe – registo escolar</title> 
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <h1>Saneamento básico na cidade da Maxixe</h1>
+    <p>Registo escolar de água, resíduos sólidos, esgotos e drenagem por bairro. Projecto de Informática Avançada.</p>
+    <nav class="tabs" aria-label="Seções">
+      <a href="#resumo">Resumo</a><a href="#registos">Registos</a><a href="#novo">Novo registo</a><a href="#creditos">Creditos</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="note"><b>Dados de exemplo.</b> Os bairros e ocorrências abaixo são fictícios, só para mostrar como a ferramenta funciona. Substitua-os pelos dados recolhidos pelo grupo.</div>
+
+  <section id="resumo">
+    <h2>Resumo</h2>
+    <p class="sub">Os números e o gráfico mudam conforme o bairro e a categoria escolhidos.</p>
+    <div class="filters">
+      <label>Bairro<select id="fBairro"></select></label>
+      <label>Categoria<select id="fCat"></select></label>
+      <button class="ghost" id="limpar" type="button">Limpar filtros</button>
+    </div>
+    <div class="tiles" id="tiles" style="margin-top:1rem"></div>
+    <div class="grid2">
+      <div class="card"><h3>Ocorrências por categoria</h3><div id="chartCat"></div></div>
+      <div class="card"><h3>Ocorrências por bairro</h3><div id="chartBairro"></div></div>
+    </div>
+  </section>
+
+  <section id="registos">
+    <h2>Registos</h2>
+    <p class="sub">Cada linha é uma ocorrência observada ou encontrada numa fonte institucional. Não se registam dados pessoais.</p>
+    <div class="card scroll">
+      <table>
+        <thead><tr><th>Bairro</th><th>Categoria</th><th>Ocorrência</th><th>Gravidade</th><th>Fonte</th></tr></thead>
+        <tbody id="rows"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="novo">
+    <h2>Novo registo</h2>
+    <p class="sub">Preencha os campos e o registo entra na tabela e nos gráficos.</p>
+    <div class="card">
+      <div class="form">
+        <label>Bairro<input id="nBairro" list="bairros" placeholder="Ex.: Bairro A"><datalist id="bairros"></datalist></label>
+        <label>Categoria<select id="nCat"></select></label>
+        <label>Gravidade<select id="nGr"><option>Baixa</option><option>Média</option><option>Alta</option></select></label>
+        <label>Fonte<select id="nFonte"><option>Fonte institucional</option><option>Observação orientada</option><option>Pergunta breve</option></select></label>
+        <label class="full">Descrição da ocorrência<textarea id="nDesc" placeholder="Ex.: Contentor de lixo cheio junto ao mercado"></textarea></label>
+        <div class="full"><button id="add" type="button">Guardar registo</button><span id="msg" role="status"></span></div>
+      </div>
+    </div>
+  </section>
+</main>
+<hr>
+<footer class="wrap">
+    <section id="creditos">
+         Copyright
+© 2026 Arthur Vieira Rios Lage e seu grupo do trabalho de INFORMATICA AVANÇADA. Todos os direitos reservados.
+    </section>
+</footer>
+  
+<script src="script.js">
+    
+</script>
+</body>
+</html>
+
