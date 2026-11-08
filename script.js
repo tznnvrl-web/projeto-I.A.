@@ -85,7 +85,7 @@ function desenharBarras(el, contagens, corFn) {
   const max = Math.max(1, ...chaves.map((k) => contagens[k]));
 
   if (!chaves.length) {
-    el.innerHTML = '<p class="sub">Sem registos para estes filtros.</p>';
+    el.innerHTML = '<p class="sub">Sem registros para estes filtros.</p>';
     return;
   }
 
@@ -112,7 +112,7 @@ function desenharTiles(total, porCategoria) {
 function desenharTabela(rows) {
   if (!rows.length) {
     $('rows').innerHTML =
-      '<tr><td colspan="5">Nenhum registo para estes filtros. Mude o bairro ou a categoria.</td></tr>';
+      '<tr><td colspan="5">Nenhum registro para estes filtros. Mude o bairro ou a categoria.</td></tr>';
     return;
   }
 
@@ -150,7 +150,7 @@ function limparFiltros() {
   render();
 }
 
-function adicionarRegisto() {
+function adicionarRegistro() {
   const bairro = $('nBairro').value.trim();
   const descricao = $('nDesc').value.trim();
 
@@ -172,14 +172,14 @@ function adicionarRegisto() {
 
   preencherSelects();
   render();
-  mostrarMensagem('Registo guardado.', 'var(--drenagem)');
+  mostrarMensagem('Registro guardado.', 'var(--drenagem)');
 }
 
 
 $('fBairro').onchange = render;
 $('fCat').onchange = render;
 $('limpar').onclick = limparFiltros;
-$('add').onclick = adicionarRegisto;
+$('add').onclick = adicionarRegistro;
 
 preencherSelects();
 render();
